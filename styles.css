@@ -14,6 +14,7 @@ body{
   border-radius: 10px;
   position: relative;
   margin: 10px auto;
+  z-index: 1;
 }
 .prev, .next {
   cursor: pointer;
@@ -82,13 +83,28 @@ body{
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	color: #fff;
 	padding: 20px 10px;
-	border: 1px dotted rgba(254, 220, 34, 1);
+	border-radius: 10px;
+	border-top: 1px solid rgba(254, 220, 34, 1);
+	border-bottom: 1px solid rgba(254, 220, 34, 1) ;
 
 }
 .principito{
 	font-size: 30px;
+	color: #fff;
+	text-align: center;
 	font-family: 'Pacifico', cursive;
+}
+.azuca-moroti{
+	font-size: 30px;
+	text-align: center;
+	font-family: 'Comforter', cursive;
+}
+.kuña-batallon{
+	font-size: 30px;
+	text-align: center;
+	font-family: 'Bebas Neue', cursive;
 }
 .div-articulo > img {
 	width: 100%;
@@ -117,7 +133,7 @@ body{
 }
 
 .background-info{
-	border-radius: 3px;
+	border-radius: 10px;
 	display: flex;
 	flex-direction: column;
 	display: block;
@@ -125,7 +141,8 @@ body{
 	max-width: 90%;
 	margin: 0 auto;
 	padding: 2rem;
-	background-color: #fff;
+	background-color: rgba(50, 50, 50, 0.96);
+	color: rgba(254, 220, 34, 1);
 }
 @media (max-width: 700px){
 	

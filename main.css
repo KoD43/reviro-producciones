@@ -3,8 +3,22 @@
   width: 100%;
   border-width: 1px;
   justify-content: space-around;
-  background-color: #000;
+  background-color: rgba(50, 50, 50, 1);
   position: relative;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+header.sticky{
+  position: fixed;
+
+}
+header.sticky .h1-conteiner{
+  display: none;
+}
+header.sticky .img-logo{
+  display: none;
+  
 }
 .img-logo img{
 
@@ -84,6 +98,7 @@ li a:hover{
       }
       .h1-conteiner{
       	font-size: 6px;
+        margin-bottom: 10px;
 
       }
       nav{
@@ -113,6 +128,14 @@ li a:hover{
         width:100%;
         padding:20px;    
       }
+      }
+      header.sticky .h1-conteiner{
+        display: flex;
+      }
+       header.sticky .img-logo{
+        display: none;
+          
+      }
       @keyframes muestraMenu {
     	from {opacity: 0;}
     	to {opacity: 1;}
@@ -136,6 +159,7 @@ li a:hover{
 	 .ham.girar:hover{
 	     transform:rotate(360deg);
 	 }
+   
 }
 @media (max-width: 412px){
   .h1-conteiner{

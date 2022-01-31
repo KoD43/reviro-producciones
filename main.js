@@ -1,4 +1,7 @@
-
+window.addEventListener("scroll", ()=>{
+    const header = document.querySelector(".header");
+    header.classList.toggle("sticky", window.scrollY > 0);
+})
 const ham = document.querySelector('.ham');
 const links = document.querySelector('.link-conteiner');
 const barras = document.querySelectorAll('.ham span');
@@ -15,7 +18,6 @@ for (i = 0; i< as.length ; i++){
     ham.classList.toggle('girar');
     });
 }
-console.log(as);
 ham.addEventListener('click', () => {
     links.classList.toggle('activado');
     body.classList.toggle('body-oculto');
