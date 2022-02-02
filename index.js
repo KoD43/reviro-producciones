@@ -24,3 +24,9 @@ sr.reveal('.div-articulo', {
 	distance: '-100px'
 
 });
+sr.reveal('.contenedor-card', {
+	duration: 3000,
+	origin: 'bottom',
+	distance: '-100px'
+
+});

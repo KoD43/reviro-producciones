@@ -3,6 +3,9 @@
 	padding: 0;
 	margin: 0;
 }
+html{
+	scroll-behavior: smooth;
+}
 body{
 	font-size: 16px;
 	font-family: 'Roboto Condensed', sans-serif;
@@ -126,11 +129,7 @@ body{
   to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 450px) {
-  .prev, .next,.text {font-size: 11px}
-  .mySlides img{ height: 200px; }
-}
+
 
 .background-info{
 	border-radius: 10px;
@@ -139,13 +138,70 @@ body{
 	display: block;
 	width: 90%;
 	max-width: 90%;
-	margin: 0 auto;
+	margin: 20px auto;
 	padding: 2rem;
 	background-color: rgba(50, 50, 50, 0.96);
 	color: rgba(254, 220, 34, 1);
 }
+.background-info > p {
+	display: block;
+	padding: 10px;
+	border-top: 1px solid rgba(254, 220, 34, 1);
+	border-bottom: 1px solid rgba(254, 220, 34, 1) ;
+
+}
+.cards{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	padding-top: 10px;
+
+	gap: 10px;
+
+}
+.contenedor-card{
+	width: 100;
+	height: 200;
+	position: relative;
+	border-radius: 10%;
+	box-shadow: 2px 2px 2px 1px rgba(254, 220, 34, 1);
+	overflow: hidden;
+
+}
+.contenedor-card img{
+	width: 100%;
+	height: 100%;
+	
+}
+.contenedor-card:hover::after{
+	transform: translateY(0);
+	transform: translateX(0);
+}
+.contenedor-card::after{
+	content: "  JUAN MENDEZ  DIRECTOR ";
+	padding: 10px;
+	font-size: 2rem;
+	position: absolute;
+	margin: auto;
+	color: #fff;
+	background-color: rgba(254, 220, 34, 1);
+	inset: 0;
+	display: grid;
+	place-items:  center;
+	transform: translateY(100%);
+	transform: translateX(100%);
+	transition: transform 1s;
+
+
+}
+
 @media (max-width: 700px){
+	.cards{
+		grid-template-columns: 1fr 1fr;
+	}
 	
 	
-	
+}
+@media only screen and (max-width: 450px) {
+  .prev, .next,.text {font-size: 11px}
+  .mySlides img{ height: 200px; }
 }
